@@ -7,8 +7,6 @@ module "virtual_machines" {
   size                       = "Standard_B1s"
   admin_username             = var.admin_username
   admin_password             = var.admin_password
-  subnet_id                  = azurerm_subnet.isaac-subnet-0.id
-  private_ip_address         = "10.0.1.10"
   sku                        = "8_6"
 
   data_disks = {
@@ -18,12 +16,12 @@ module "virtual_machines" {
       caching              = "ReadWrite"
       storage_account_type = "Standard_LRS"
     }
-    datadisk-1 = {
-      lun                  = 1
-      disk_size_gb         = 10
-      caching              = "ReadWrite"
-      storage_account_type = "Standard_LRS"
-    }
+    # datadisk-1 = {
+    #   lun                  = 1
+    #   disk_size_gb         = 10
+    #   caching              = "ReadWrite"
+    #   storage_account_type = "Standard_LRS"
+    # }
   }
 
   nics = {

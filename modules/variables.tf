@@ -18,11 +18,6 @@ variable "size" {
   description = "VM Size"
 }
 
-variable "subnet_id" {
-  type        = string
-  description = "Subnet ID"
-}
-
 variable "admin_username" {
   type        = string
   description = "Admin username"
@@ -33,11 +28,6 @@ variable "admin_password" {
   type        = string
   description = "Admin password"
   sensitive   = true
-}
-
-variable "private_ip_address" {
-  type        = string
-  description = "Private IP Address"
 }
 
 variable "sku" {
